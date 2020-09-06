@@ -1,4 +1,4 @@
-package lej.modern.mvvm_recyclerview
+package lej.modern.mvvm_recyclerview.data.models
 
 data class Movie(
     val id: Int,

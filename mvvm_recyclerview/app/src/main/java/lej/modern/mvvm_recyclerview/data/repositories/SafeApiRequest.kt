@@ -1,4 +1,4 @@
-package lej.modern.mvvm_recyclerview
+package lej.modern.mvvm_recyclerview.data.repositories
 
 import retrofit2.Response
 import java.io.IOException
@@ -11,7 +11,9 @@ abstract class SafeApiRequest {
             return response.body()!!
         }else{
             //@todo handle api exception
-            throw  ApiException(response.code().toString())
+            throw  ApiException(
+                response.code().toString()
+            )
         }
 
     }

@@ -1,9 +1,9 @@
-package lej.modern.mvvm_recyclerview
+package lej.modern.mvvm_recyclerview.data.network
 
+import lej.modern.mvvm_recyclerview.data.models.Movie
 import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
-import retrofit2.create
 import retrofit2.http.GET
 
 interface MoviesApi {
@@ -13,7 +13,7 @@ interface MoviesApi {
 
 
     companion object{
-        operator fun invoke() : MoviesApi{
+        operator fun invoke() : MoviesApi {
             return Retrofit.Builder()
                 .addConverterFactory(GsonConverterFactory.create())
                 .baseUrl("https://api.simplifiedcoding.in/course-apis/recyclerview/")

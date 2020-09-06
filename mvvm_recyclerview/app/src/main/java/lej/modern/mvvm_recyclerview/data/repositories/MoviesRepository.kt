@@ -1,4 +1,6 @@
-package lej.modern.mvvm_recyclerview
+package lej.modern.mvvm_recyclerview.data.repositories
+
+import lej.modern.mvvm_recyclerview.data.network.MoviesApi
 
 class MoviesRepository (
     private val api: MoviesApi
