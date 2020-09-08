@@ -10,7 +10,8 @@ import lej.modern.mvvm_recyclerview.databinding.RecyclerviewMovieBinding
 
 
 class MoviesAdapter (
-    private val movies: List<Movie>
+    private val movies: List<Movie>,
+    private val listener: RecyclerViewClickListener
 ) : RecyclerView.Adapter<MoviesAdapter.MoviesViewHolder>(){
 
     override fun getItemCount() = movies.size
@@ -27,7 +28,13 @@ class MoviesAdapter (
 
     override fun onBindViewHolder(holder: MoviesViewHolder, position: Int) {
         holder.recyclerviewMovieBinding.movie = movies[position]
+        holder.recyclerviewMovieBinding.buttonBook.setOnClickListener{
+            listener.onRecyclerViewItemClick(holder.recyclerviewMovieBinding.buttonBook, movies[position])
 
+        }
+        holder.recyclerviewMovieBinding.imageView.setOnClickListener{
+            listener.onRecyclerViewItemClick(holder.recyclerviewMovieBinding.imageView, movies[position])
+        }
     }
 
 
