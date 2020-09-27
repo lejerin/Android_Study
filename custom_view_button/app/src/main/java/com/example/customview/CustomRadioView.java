@@ -14,8 +14,15 @@ import java.util.List;
 
 public class CustomRadioView extends LinearLayout {
 
+    private ButtonClickListener clickListener;
+
     private LinearLayout linearLayout;
     private List<Button> btnList = new ArrayList<>();
+
+    public interface ButtonClickListener
+    {
+        void onClick(int i);
+    }
 
     public CustomRadioView(Context context)
     {
@@ -60,13 +67,21 @@ public class CustomRadioView extends LinearLayout {
 
     private void selectedBtn(View v){
 
+
         for(int i=0; i<btnList.size(); i++){
             if(btnList.get(i) == v){
                 btnList.get(i).setSelected(true);
+                clickListener.onClick(i);
             }else{
                 btnList.get(i).setSelected(false);
             }
         }
 
     }
+
+    public void setReportListener(ButtonClickListener listener){
+        this.clickListener = listener;
+
+    }
+
 }
