@@ -32,6 +32,8 @@ class HomeFragment : Fragment() {
 
 
 
+
+        
 //        Item(R.drawable.image2, "Earth", "Earth is the third planet from the Sun and the only astronomical object known to harbor life. According to radiometric dating and other sources of evidence, Earth formed over 4.5 billion years ago.",
 //            R.drawable.earth),
         val item = arrayListOf<Item>(
