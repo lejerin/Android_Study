@@ -23,9 +23,10 @@
 
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/relativeLayout"
-        android:layout_width="match_parent"
-        android:layout_height="400dp"
+        android:id="@+id/cardview"
+        android:layout_width="0dp"
+        app:layout_constraintDimensionRatio="H,1:1.1"
+        android:layout_height="0dp"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         app:cardCornerRadius="30dp"
@@ -43,7 +44,7 @@
 
     <com.example.android.customfancontroller.CustomPieChart
         android:elevation="30dp"
-        android:id="@+id/custom"
+        android:id="@+id/chart"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -51,10 +52,10 @@
         app:color1="@color/chart_color_1"
         app:color2="@color/chart_color_2"
         app:color3="@color/chart_color_3"
-        app:layout_constraintBottom_toBottomOf="@+id/relativeLayout"
+        app:layout_constraintBottom_toBottomOf="@+id/cardview"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/relativeLayout"
-        app:layout_constraintTop_toTopOf="@+id/relativeLayout">
+        app:layout_constraintStart_toStartOf="@+id/cardview"
+        app:layout_constraintTop_toTopOf="@+id/cardview">
 
     </com.example.android.customfancontroller.CustomPieChart>
 
