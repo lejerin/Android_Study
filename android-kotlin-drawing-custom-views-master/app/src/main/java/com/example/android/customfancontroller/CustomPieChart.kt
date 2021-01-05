@@ -24,7 +24,6 @@ open class CustomPieChart @JvmOverloads constructor(context: Context, attrs: Att
         arr[3] = typedArray.getColor(R.styleable.CustomPieChart_color3,0)
         typedArray.recycle()
 
-
         chartView.setColor(arr)
     }
 

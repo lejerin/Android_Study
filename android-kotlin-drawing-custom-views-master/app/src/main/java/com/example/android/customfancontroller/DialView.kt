@@ -70,8 +70,6 @@ class DialView @JvmOverloads constructor(
 
     private var radius = 0.0f                  // Radius of the circle.
     private var fanSpeed = FanSpeed.OFF        // The active selection.
-    //Point at which to draw label and indicator circle position. PointF is a point
-    //with floating-point coordinates.
     private val pointPosition: PointF = PointF(0.0f, 0.0f)
 
     private val fanSpeedLowColor:Int
